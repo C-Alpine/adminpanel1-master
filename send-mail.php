@@ -1,23 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2>Wyślij wiadomość orkiestrantom:</h2>
 
-require_once 'vendor/autoload.php';
+<form action="send-mail-action.php/" method="post">
+    <br/>
+    Tytuł wiadomości:
+    <input type="text" name="title" placeholder="Ważny tytuł!"><br>
+    <br/>
+    Treść:<br>
+    <textarea id="content" name="content"
+               placeholder="Wpisz wiadomość tutaj..."
+               style="height:200px; width: 400px;"></textarea><br/>
+    <input type="submit" value="Wyślij!" name="submit">
+</form>
 
-// Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.mailgun.org', 587))
-    ->setUsername('postmaster@sandbox0bf6c57f45474365b44cb7f0217a7690.mailgun.org')
-    ->setPassword('c58d10239c58d31c8db2eba4bdef4347')
-;
-
-// Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
-
-// Create a message
-$message = (new Swift_Message('Powiadomienie orkiestrowe!'))
-    ->setFrom(['krzysztofdyrygent@orkiestra.com' => 'Krzysztof Dyrygent'])
-    ->setTo(['grzegorz0kedzierski@gmail.com'=> 'Grzegorz Kędzierski'])
-    ->setBody('Dodatkowa próba w czwartek o 19!')
-;
-
-// Send the message
-$result = $mailer->send($message);
+</body>
+</html>
