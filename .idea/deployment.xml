@@ -12,7 +12,7 @@
       <paths name="shareboard">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="adminpanel1-master" />
+            <mapping local="$PROJECT_DIR$" web="adminpanel1" />
           </mappings>
         </serverdata>
       </paths>

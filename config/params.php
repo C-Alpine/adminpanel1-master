@@ -7,4 +7,4 @@
 
     define("DS", DIRECTORY_SEPARATOR);
     define('ROOT', __DIR__.'/');
-    define("SITE_PATH","http://localhost/adminpanel1-master/");
+    define("SITE_PATH","http://localhost/adminpanel1/");
